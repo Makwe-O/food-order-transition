@@ -3,7 +3,6 @@ import Eba from '../../assets/eba.png';
 const Modal = ({ display, closeModal }) => {
   const [isFull, setIsFull] = useState(false);
   const [init, setInit] = useState(true);
-  console.log(isFull);
 
   return (
     <div>

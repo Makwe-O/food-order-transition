@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Play from './assets/video.png';
 import Phone from './assets/phone.png';
 import PurpleArrow from './assets/next-purple.svg';
