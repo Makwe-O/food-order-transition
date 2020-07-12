@@ -1,8 +1,8 @@
 h1 {
-  font-size: 1.8em;
+  font-size: 26px;
 }
 h3 {
-  font-size: 1.5em;
+  font-size: 17px;
 }
 h4 {
   font-size: 1.2em;
@@ -12,12 +12,13 @@ a {
 }
 .app {
   padding: 0 20px;
-  max-width: 420;
+  max-width: 420px;
   margin: 0 auto;
 }
 p {
   margin-top: 0;
   margin-bottom: 0px;
+  line-height: 1.4;
 }
 
 .app__image {
@@ -39,14 +40,15 @@ p {
   margin-bottom: 2em;
 }
 .app__schedule-link {
-  border: 1px solid #ffbe56;
+  font-size: 12px;
+  border: 1px solid #ff9d00;
   background: #fffaf1;
   color: #ffbe56;
-  padding: 0.2em 0.6em;
+  padding: 0.2em 0.6em 0.4em 0.6em;
   border-radius: 1.2em;
 }
 .app__card {
-  padding-bottom: 2em;
+  padding-bottom: 0.8em;
   display: flex;
   min-height: 60px;
 }
@@ -56,7 +58,7 @@ p {
   color: #fff;
 }
 .app__card-left {
-  flex: 1.5;
+  flex: 2.1;
   border-top-left-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
   padding: 1em;
@@ -72,6 +74,7 @@ p {
 }
 .app__card-left--yellow {
   background: #ffbe56;
+
   display: flex;
   color: #fff;
   justify-content: center;
@@ -80,7 +83,10 @@ p {
   align-self: center;
 }
 .app__card-left--light-yellow {
+  display: flex;
+  justify-content: center;
   background: #f9f5e1;
+  align-items: center;
 }
 .text-bold {
   font-weight: 700;
@@ -116,7 +122,7 @@ p {
 }
 
 .getting-started__instruction {
-  padding: 1em 0 1.5em 0;
+  padding: 12px 0;
   line-height: 1.3;
 }
 .getting-started__action {
@@ -136,13 +142,320 @@ p {
   display: flex;
   align-items: center;
   padding-top: 1em;
+  margin-bottom: 1em;
 }
 .timeline__detail {
-  flex: 4;
+  flex: 3;
   background: #e4f5fd;
   border-radius: 0.5em;
   padding: 1em;
 }
 .timeline__date {
   flex: 1;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 100;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.modal__container {
+  border-radius: 20px;
+  position: relative;
+  width: 100%;
+  top: 150px;
+  margin: 0 auto;
+  animation: modal 800ms ease-in-out 0s;
+}
+.modal__container-reverse {
+  border-radius: 20px;
+  position: relative;
+  width: 100%;
+  top: 150px;
+  opacity: 0;
+  margin: 0 auto;
+  animation: modalReverse 1000ms ease-in-out 0s;
+}
+.modal__close {
+  position: absolute;
+  right: 18px;
+  top: 6px;
+  cursor: pointer;
+}
+.modal__background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  animation-name: background;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+.modal__background--reverse {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.8;
+  background-color: #000;
+  animation-name: backgroundReverse;
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+.modal__header {
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.modal__header-title {
+  display: flex;
+  padding: 20px;
+  border-top-left-radius: 20px;
+  background: #faf4dd;
+  min-height: 30px;
+  height: 30px;
+  flex: 3.5;
+}
+.modal__header-title p {
+  white-space: nowrap;
+}
+
+.modal__header-close {
+  display: flex;
+  height: 30px;
+  padding: 20px;
+  background: #ffb44c;
+  border-top-right-radius: 20px;
+  min-height: 30px;
+  flex: 1;
+  justify-content: center;
+}
+.modal__header-close span {
+  font-size: 28px;
+  color: #fff;
+  font-weight: 700;
+}
+.modal__body {
+  padding: 20px;
+  background: #fff;
+  height: 70vh;
+}
+li.foward {
+  display: block;
+  height: 72px;
+  animation-name: animateIn;
+  animation-duration: 400ms;
+  animation-delay: calc(var(--animation-order) * 80ms);
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  margin-bottom: 20px;
+}
+li.reverse {
+  display: block;
+  height: 72px;
+  animation-name: animateInReverse;
+  animation-duration: 400ms;
+  animation-delay: calc(var(--animation-order) * 80ms);
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  margin-bottom: 20px;
+}
+.modal__item {
+  display: flex;
+  align-items: center;
+}
+
+.modal__item img {
+  padding-right: 20px;
+}
+
+.modal__item-name {
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.modal__item-class {
+  font-size: 15px;
+}
+.increase-index {
+  z-index: 200;
+}
+.init {
+  display: none;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    top: 220px;
+    width: 80%;
+  }
+  to {
+    opacity: 1;
+    top: 150px;
+  }
+}
+@keyframes modalReverse {
+  from {
+    /* opacity: 0; */
+    opacity: 1;
+  }
+  to {
+    width: 90%;
+    top: 220px;
+    visibility: hidden;
+  }
+}
+
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animateInReverse {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+    visibility: hidden;
+  }
+}
+@keyframes background {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.8;
+  }
+}
+@keyframes backgroundReverse {
+  0% {
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes headermodal {
+  0% {
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes headermodalReverse {
+  0% {
+  }
+
+  100% {
+    visibility: hidden;
+  }
+}
+
+.picture-modal {
+  position: fixed;
+  top: 0%;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 150;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.picture-modal__background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  animation-name: background;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+.picture-modal__background--reverse {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 150;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.8;
+  background-color: #000;
+  animation-name: backgroundReverse;
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.modal-content {
+  top: 20%;
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+  margin: auto;
+  width: 100%;
+  position: absolute;
+}
+.modal-content-reverse {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoomreverse;
+  animation-duration: 0.6s;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomreverse {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+  }
 }

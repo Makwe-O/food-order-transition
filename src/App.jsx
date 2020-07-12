@@ -1,11 +1,15 @@
-import React from 'react';
-import Play from './assets/play.svg';
-import Phone from './assets/phone.svg';
+import React, { useState, useEffect } from 'react';
+import Play from './assets/video.png';
+import Phone from './assets/phone.png';
 import PurpleArrow from './assets/next-purple.svg';
 import YellowArrow from './assets/next-yellow.svg';
 import './App.css';
+import Modal from './components/Modal';
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+  const [init, setInit] = useState(true);
+
   return (
     <div className="app">
       <div className="app__intro">
@@ -22,29 +26,41 @@ function App() {
         <div className="app__schedule">
           <h1>Schedule</h1>
           <a href="/" className="app__schedule-link">
-            Reconfigure Services{' '}
+            Reconfigure Services
           </a>
         </div>
         <div className="app__card ">
           <div className="app__card-left app__card-left--light-green">
             <p>
-              Your account is inactive.{' '}
+              Your account is inactive.
               <span className="text-bold">15% off</span> offer until June 23.
             </p>
           </div>
 
-          <div className="app__card-right app__card-right--green">
+          <div
+            className="app__card-right app__card-right--green"
+            onClick={() => console.log('hi')}>
             <div className="text-center">
-              <p>N75,000</p>
+              <p>
+                {' '}
+                <strike>N75,000</strike>{' '}
+              </p>
               <p>Pay N62,800</p>
             </div>
           </div>
         </div>
-        <div className="app__card ">
+        <div className="app__card">
           <div className="app__card-left app__card-left--light-yellow">
             <p>View your meals for the week.</p>
           </div>
-          <div className="app__card-right app__card-left--yellow">
+          <div
+            className={`app__card-right app__card-left--yellow ${
+              showModal ? '' : 'increase-index'
+            }`}
+            onClick={() => {
+              setShowModal(true);
+              setInit(false);
+            }}>
             <p>Check 'em</p>
           </div>
         </div>
@@ -57,7 +73,7 @@ function App() {
 
         <div className="getting-started__option">
           <div className="getting-started__option-item">
-            <img src={Phone} alt="phone" width="20px" />
+            <img src={Phone} alt="video" width="40px" />
             <p className="getting-started__instruction">
               Set up a call with your gardener
             </p>
@@ -68,7 +84,7 @@ function App() {
             </a>
           </div>
           <div className="getting-started__option-item">
-            <img src={Play} alt="video" width="20px" />
+            <img src={Play} alt="video" width="40px" />
             <p className="getting-started__instruction">
               Lose yourself to this video
             </p>
@@ -84,7 +100,7 @@ function App() {
         <h4 className="timeline-text">Tomorrow</h4>
         <div className="timeline__row">
           <div className="timeline__date">
-            <p>9-10am</p>
+            <p>9 - 10am</p>
           </div>
           <div className="timeline__detail">
             <div>
@@ -92,6 +108,9 @@ function App() {
             </div>
           </div>
         </div>
+      </div>
+      <div className={init ? 'init' : ''}>
+        <Modal display={showModal} closeModal={() => setShowModal(false)} />
       </div>
     </div>
   );

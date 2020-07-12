@@ -1,8 +1,19 @@
+@font-face {
+  font-family: CerebiSans;
+  src: url(./assets/fonts/CerebriSans-Light.woff);
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: CerebiSans;
+  src: url(./assets/fonts/CerebriSans-Regular.woff);
+  font-style: normal;
+  font-weight: 400;
+}
 body {
   margin: 0;
-
-  font-size: 13px;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-family: 'CerebiSans', sans-serif;
 }
 
 code {
@@ -15,5 +26,5 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Source Serif Pro', serif;
+  font-family: 'PT Serif', serif;
 }
