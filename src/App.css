@@ -1,0 +1,148 @@
+h1 {
+  font-size: 1.8em;
+}
+h3 {
+  font-size: 1.5em;
+}
+h4 {
+  font-size: 1.2em;
+}
+a {
+  text-decoration: none;
+}
+.app {
+  padding: 0 20px;
+  max-width: 420;
+  margin: 0 auto;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+.app__image {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+.app__intro {
+  display: flex;
+  align-items: center;
+  margin: 2em 0;
+}
+.app__schedule {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+.app__schedule-link {
+  border: 1px solid #ffbe56;
+  background: #fffaf1;
+  color: #ffbe56;
+  padding: 0.2em 0.6em;
+  border-radius: 1.2em;
+}
+.app__card {
+  padding-bottom: 2em;
+  display: flex;
+  min-height: 60px;
+}
+
+.app__card-right--green {
+  background: #00c267;
+  color: #fff;
+}
+.app__card-left {
+  flex: 1.5;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  padding: 1em;
+}
+.app__card-right {
+  flex: 1;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  padding: 1em;
+}
+.app__card-left--light-green {
+  background: #e0f9ec;
+}
+.app__card-left--yellow {
+  background: #ffbe56;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+}
+.app__card-left--yellow p {
+  align-self: center;
+}
+.app__card-left--light-yellow {
+  background: #f9f5e1;
+}
+.text-bold {
+  font-weight: 700;
+}
+.text-center {
+  text-align: center;
+}
+
+.getting-started {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  background: #e4f5fd;
+  border-radius: 0.5em;
+  padding: 1.5em;
+}
+
+.getting-started__header {
+  margin-bottom: 0.3em;
+}
+.getting-started__text {
+  margin-bottom: 0.3em;
+}
+.getting-started__option {
+  padding: 1.5em 0;
+  display: flex;
+  justify-content: space-between;
+}
+.getting-started__option-item {
+  flex: 1;
+  max-width: 130px;
+}
+
+.getting-started__instruction {
+  padding: 1em 0 1.5em 0;
+  line-height: 1.3;
+}
+.getting-started__action {
+  text-decoration: underline;
+}
+
+.getting-started__action--purple {
+  color: #c4b7f9;
+}
+.getting-started__action--yellow {
+  color: #f4ab8f;
+}
+.timeline-text {
+  color: #00c267;
+}
+.timeline__row {
+  display: flex;
+  align-items: center;
+  padding-top: 1em;
+}
+.timeline__detail {
+  flex: 4;
+  background: #e4f5fd;
+  border-radius: 0.5em;
+  padding: 1em;
+}
+.timeline__date {
+  flex: 1;
+}
