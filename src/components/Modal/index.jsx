@@ -25,7 +25,10 @@ const Modal = ({ display, closeModal }) => {
               <li
                 style={{ '--animation-order': 1 }}
                 className={display ? 'foward' : 'reverse'}
-                onClick={() => setIsFull(true)}>
+                onClick={() => {
+                  setIsFull(true);
+                  setInit(false);
+                }}>
                 <div className="modal__item">
                   <div>
                     <img src={Eba} alt="eba" width="60px" />
@@ -48,40 +51,52 @@ const Modal = ({ display, closeModal }) => {
                     <img src={Eba} alt="eba" width="60px" />
                   </div>
                   <div>
-                    <p className="modal__item-name">Akara & Pap</p>
-                    <p className="modal__item-class">Carbohydrate</p>
+                    <p className="modal__item-name">Jollof Rice</p>
+                    <p className="modal__item-class">Protein</p>
                   </div>
                 </div>
               </li>
               <li
                 style={{ '--animation-order': 3 }}
-                className={display ? 'foward' : 'reverse'}>
+                className={display ? 'foward' : 'reverse'}
+                onClick={() => {
+                  setIsFull(true);
+                  setInit(false);
+                }}>
                 <div className="modal__item">
                   <div>
                     <img src={Eba} alt="eba" width="60px" />
                   </div>
                   <div>
-                    <p className="modal__item-name">Akara & Pap</p>
+                    <p className="modal__item-name">Gastonton</p>
                     <p className="modal__item-class">Carbohydrate</p>
                   </div>
                 </div>
               </li>
               <li
                 style={{ '--animation-order': 4 }}
-                className={display ? 'foward' : 'reverse'}>
+                className={display ? 'foward' : 'reverse'}
+                onClick={() => {
+                  setIsFull(true);
+                  setInit(false);
+                }}>
                 <div className="modal__item">
                   <div>
                     <img src={Eba} alt="eba" width="60px" />
                   </div>
                   <div>
-                    <p className="modal__item-name">Akara & Pap</p>
+                    <p className="modal__item-name">Port Domenic</p>
                     <p className="modal__item-class">Carbohydrate</p>
                   </div>
                 </div>
               </li>
               <li
                 style={{ '--animation-order': 5 }}
-                className={display ? 'foward' : 'reverse'}>
+                className={display ? 'foward' : 'reverse'}
+                onClick={() => {
+                  setIsFull(true);
+                  setInit(false);
+                }}>
                 <div className="modal__item">
                   <div>
                     <img src={Eba} alt="eba" width="60px" />
@@ -104,9 +119,9 @@ const Modal = ({ display, closeModal }) => {
             setInit(true);
           }}>
           <img
-            className={isFull ? `modal-content` : `modal-content-reverse`}
             src={Eba}
             alt="eba"
+            className={isFull ? `modal-content` : `modal-content-reverse`}
           />
         </div>
         <div

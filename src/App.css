@@ -232,6 +232,7 @@ p {
   min-height: 30px;
   height: 30px;
   flex: 3.5;
+  white-space: nowrap;
 }
 .modal__header-title p {
   white-space: nowrap;
@@ -288,10 +289,12 @@ li.reverse {
 
 .modal__item-name {
   font-size: 18px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+  font-weight: 300;
 }
 .modal__item-class {
   font-size: 15px;
+  font-weight: 300;
 }
 .increase-index {
   z-index: 200;
@@ -430,8 +433,6 @@ li.reverse {
   position: absolute;
 }
 .modal-content-reverse {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
   animation-name: zoomreverse;
   animation-duration: 0.6s;
   width: 100%;
