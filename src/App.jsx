@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Play from './assets/video.png';
 import Phone from './assets/phone.png';
+import User from './assets/user.png';
 import PurpleArrow from './assets/next-purple.svg';
 import YellowArrow from './assets/next-yellow.svg';
 import './App.css';
@@ -14,11 +15,7 @@ function App() {
     <div className="app">
       <div className="app__intro">
         <div className="app__image">
-          <img
-            src="https://res.cloudinary.com/dnavbc7ny/image/upload/c_scale,w_269/v1588369773/Onyeka_pmmiho.jpg"
-            alt="user"
-            width="30px"
-          />
+          <img src={User} alt="user" width="30px" />
         </div>
         <h3>Good Morning Silm!</h3>
       </div>
@@ -37,12 +34,9 @@ function App() {
             </p>
           </div>
 
-          <div
-            className="app__card-right app__card-right--green"
-            onClick={() => console.log('hi')}>
+          <div className="app__card-right app__card-right--green">
             <div className="text-center">
               <p>
-                {' '}
                 <strike>N75,000</strike>{' '}
               </p>
               <p>Pay N62,800</p>
