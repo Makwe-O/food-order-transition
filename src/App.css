@@ -1,5 +1,7 @@
 h1 {
-  font-size: 26px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #121212;
 }
 h3 {
   font-size: 17px;
@@ -60,6 +62,9 @@ p {
   background: #00c267;
   color: #fff;
 }
+.app__card-right--green strike {
+  font-weight: 300;
+}
 .app__card-left {
   flex: 2.1;
   border-top-left-radius: 0.5em;
@@ -110,9 +115,11 @@ p {
 
 .getting-started__header {
   margin-bottom: 0.3em;
+  font-weight: 700;
 }
 .getting-started__text {
   margin-bottom: 0.3em;
+  font-weight: 300;
 }
 .getting-started__option {
   padding: 1.5em 0;
@@ -152,6 +159,7 @@ p {
   background: #e4f5fd;
   border-radius: 0.5em;
   padding: 1em;
+  font-size: 15px;
 }
 .timeline__date {
   flex: 1;
@@ -461,5 +469,28 @@ li.reverse {
     transform: scale(0);
     opacity: 0;
     visibility: hidden;
+  }
+}
+
+.footer {
+  padding: 20px;
+  max-width: 420px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  background: rgba(244, 244, 244, 0.75);
+}
+.footer__tab {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 360px) {
+  .footer {
+    width: 89%;
   }
 }
