@@ -107,6 +107,7 @@ function App() {
             </div>
           </div>
         </div>
+
         <div className={init ? 'init' : ''}>
           <Modal display={showModal} closeModal={() => setShowModal(false)} />
         </div>

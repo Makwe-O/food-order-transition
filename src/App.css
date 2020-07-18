@@ -475,24 +475,17 @@ li.reverse {
 }
 
 .footer {
-  padding: 10px 20px 20px 20px;
-  max-width: 420px;
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   position: fixed;
+  padding: 10px 0;
   bottom: 0;
+  left: 0;
   background: rgba(244, 244, 244, 0.75);
 }
 .footer__tab {
   text-align: center;
   font-size: 12px;
   font-weight: 300;
-}
-
-@media only screen and (max-width: 360px) {
-  .footer {
-    width: 89%;
-  }
 }
