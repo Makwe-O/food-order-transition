@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import Play from './assets/video.png';
 import Phone from './assets/phone.png';
 import User from './assets/user.png';
-import PurpleArrow from './assets/next-purple.svg';
-import YellowArrow from './assets/next-yellow.svg';
+import PurpleArrow from './assets/purplearrow.png';
+import YellowArrow from './assets/orangearrow.png';
+
 import './App.css';
 import Modal from './components/Modal';
 import Footer from './components/Footer';
@@ -75,11 +76,14 @@ function App() {
               <p className="getting-started__instruction">
                 Set up a call with your gardener
               </p>
-              <a
-                href="/"
-                className="getting-started__action getting-started__action--purple">
-                Do it <img src={PurpleArrow} alt="arrow" width="10px" />
-              </a>
+              <div className=" getting-started__action-container">
+                <a
+                  href="/"
+                  className="getting-started__action getting-started__action--purple">
+                  Do it
+                </a>
+                <img src={PurpleArrow} alt="arrow" width="10px" />
+              </div>
             </div>
             <div className="getting-started__option-item">
               <div className="getting-started__play-oval">
@@ -88,11 +92,14 @@ function App() {
               <p className="getting-started__instruction">
                 Lose yourself to this video
               </p>
-              <a
-                href="/"
-                className="getting-started__action getting-started__action--yellow">
-                Play <img src={YellowArrow} alt="arrow" width="10px" />
-              </a>
+              <div className=" getting-started__action-container">
+                <a
+                  href="/"
+                  className="getting-started__action getting-started__action--yellow">
+                  Play
+                </a>
+                <img src={YellowArrow} alt="arrow" width="10px" />
+              </div>
             </div>
           </div>
         </div>
@@ -112,11 +119,11 @@ function App() {
           </div>
         </div>
 
+        <Footer />
         <div className={init ? 'init' : ''}>
           <Modal display={showModal} closeModal={() => setShowModal(false)} />
         </div>
       </div>
-      <Footer />
     </>
   );
 }

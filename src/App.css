@@ -145,6 +145,10 @@ p {
   justify-content: center;
   align-items: center;
 }
+.getting-started__action-container {
+  display: flex;
+  align-items: center;
+}
 
 .getting-started__play-oval {
   height: 40px;
@@ -163,6 +167,7 @@ p {
 }
 .getting-started__action {
   text-decoration: underline;
+  margin-right: 5px;
 }
 
 .getting-started__action--purple {
@@ -186,9 +191,11 @@ p {
   border-radius: 0.5em;
   padding: 1em;
   font-size: 15px;
+  font-weight: 300;
 }
 .timeline__date {
   flex: 1;
+  font-weight: 400;
 }
 
 .modal {
@@ -263,7 +270,7 @@ p {
 
 .modal__header-title {
   display: flex;
-  padding: 20px;
+  padding: 30px 30px 25px 30px;
   border-top-left-radius: 20px;
   background: #faf4dd;
   min-height: 30px;
@@ -271,14 +278,16 @@ p {
   flex: 3.5;
   white-space: nowrap;
 }
+.modal__header-title h1 {
+  font-size: 20px;
+}
 .modal__header-title p {
   white-space: nowrap;
 }
 
 .modal__header-close {
   display: flex;
-  height: 30px;
-  padding: 20px;
+  padding: 30px 30px 25px 30px;
   background: #ffb44c;
   border-top-right-radius: 20px;
   min-height: 30px;
@@ -332,6 +341,7 @@ li.reverse {
 .modal__item-class {
   font-size: 15px;
   font-weight: 300;
+  color: #6c6c6c;
 }
 .increase-index {
   z-index: 200;
