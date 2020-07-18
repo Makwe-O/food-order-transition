@@ -36,6 +36,7 @@ p {
   margin: 2em 0;
 }
 .app__intro h3 {
+  font-size: 22px;
   font-weight: 400;
 }
 .app__schedule {
@@ -49,7 +50,7 @@ p {
   border: 1px solid #ff9d00;
   background: #fffaf1;
   color: #ffbe56;
-  padding: 0.2em 0.6em 0.4em 0.6em;
+  padding: 5px 10px 7px 10px;
   border-radius: 1.2em;
 }
 .app__card {
@@ -61,12 +62,13 @@ p {
 .app__card-right--green {
   background: #00c267;
   color: #fff;
-  font-weight: 600;
+  font-weight: 500;
 }
 .app__card-right--green strike {
-  font-weight: 300;
+  font-weight: 400;
 }
 .app__card-left {
+  font-weight: 300;
   flex: 2.1;
   border-top-left-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
@@ -131,6 +133,28 @@ p {
 .getting-started__option-item {
   flex: 1;
   max-width: 130px;
+}
+
+.getting-started__phone-oval {
+  height: 40px;
+  width: 40px;
+  background-color: rgba(190, 164, 255, 0.7);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.getting-started__play-oval {
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 146, 101, 0.7);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .getting-started__instruction {

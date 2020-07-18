@@ -69,7 +69,9 @@ function App() {
 
           <div className="getting-started__option">
             <div className="getting-started__option-item">
-              <img src={Phone} alt="video" width="40px" />
+              <div className="getting-started__phone-oval">
+                <img src={Phone} alt="video" width="20px" />
+              </div>
               <p className="getting-started__instruction">
                 Set up a call with your gardener
               </p>
@@ -80,7 +82,9 @@ function App() {
               </a>
             </div>
             <div className="getting-started__option-item">
-              <img src={Play} alt="video" width="40px" />
+              <div className="getting-started__play-oval">
+                <img src={Play} alt="video" width="14px" />
+              </div>
               <p className="getting-started__instruction">
                 Lose yourself to this video
               </p>
